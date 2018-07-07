@@ -1,4 +1,4 @@
-package com.kartashov.aspose.generator;
+package com.kartashov.aspose;
 
 import com.kartashov.Util;
 

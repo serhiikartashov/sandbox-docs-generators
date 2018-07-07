@@ -1,6 +1,8 @@
-newWorkBook.xlsx
-workbook.xls
-workbook.xlsx
+*.xls
+*.xlsx
+*.pdf
 .gradle
 .idea
 /out
+*.iml
+build

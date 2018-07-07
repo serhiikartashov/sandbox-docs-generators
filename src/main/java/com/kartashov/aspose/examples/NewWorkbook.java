@@ -7,6 +7,7 @@ public class NewWorkbook {
 
     public static void main(String[] args) throws Exception {
         Workbook workbook = new Workbook(); // Creating a Workbook object
-        workbook.save("newWorkBook.xlsx", SaveFormat.XLSX); //Workbooks can be saved in many formats
+        workbook.save("newWorkBook.csv", SaveFormat.CSV); //Workbooks can be saved in many formats
+        workbook.save("newWorkBook.pdf", SaveFormat.PDF); //Workbooks can be saved in many formats
     }
 }
