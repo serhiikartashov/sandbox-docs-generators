@@ -1,5 +1,7 @@
 package com.kartashov;
 
+import com.google.common.base.CharMatcher;
+
 public class Util {
 
     public static String[] sounds = new String[]{
@@ -26,4 +28,45 @@ public class Util {
             "mya", "myu", "myo",
             "rya", "ryu", "ryo",
     };
+
+    public static String[] katakana = new String[]{
+            "ア", "イ", "ウ", "エ", "オ",
+            "カ", "キ", "ク", "ケ", "コ",
+            "サ", "シ", "ス", "セ", "ソ",
+            "タ", "チ", "ツ", "テ", "ト",
+            "ナ", "ニ", "ヌ", "ネ", "ノ",
+            "ハ", "ヒ", "フ", "ヘ", "ホ",
+            "マ", "ミ", "ム", "メ", "モ",
+            "ヤ", "ユ", "ヨ", "ラ", "リ",
+            "ル", "レ", "ロ", "ワ", "ヲ",
+            "ン", "ガ", "ギ", "グ", "ゲ",
+            "ゴ", "ザ", "ジ", "ズ", "ゼ",
+            "ゾ", "ダ", "ヂ", "ヅ", "デ",
+            "ド", "バ", "ビ", "ブ", "ベ",
+            "ボ", "パ", "ピ", "プ", "ペ",
+            "ポ",
+            "キャ", "キュ", "キョ",
+            "シャ", "シュ", "ショ",
+            "チャ", "チュ", "チョ",
+            "ニャ", "ニュ", "ニョ",
+            "ヒャ", "ヒュ", "ヒョ",
+            "リャ", "リュ", "リョ",
+            "ギャ", "ギュ", "ギョ",
+            "ジャ", "ジュ", "ジョ",
+            "ティ", "ディ", "ツィ",
+            "ヂャ", "ヂュ", "ヂョ",
+            "ビャ", "ビュ", "ビョ",
+            "ピャ", "ピュ", "ピョ"};
+
+    public static final CharMatcher HIRAGANA =
+            CharMatcher.inRange((char) 0x3040, (char) 0x309f);
+
+    public static final CharMatcher KATAKANA =
+            CharMatcher.inRange((char) 0x30a0, (char) 0x30ff);
+
+    public static final CharMatcher KANA = HIRAGANA.or(KATAKANA);
+
+    public static final CharMatcher KANJI =
+            CharMatcher.inRange((char) 0x4e00, (char) 0x9faf);
+
 }

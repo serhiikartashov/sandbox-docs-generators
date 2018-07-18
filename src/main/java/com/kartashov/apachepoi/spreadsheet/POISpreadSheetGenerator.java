@@ -8,12 +8,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Random;
 
-import static com.kartashov.Util.sounds;
+import static com.kartashov.Util.katakana;
 
 public class POISpreadSheetGenerator {
 
     public static void main(String[] args) throws IOException {
-        String[] list = sounds;
+        String[] list = katakana;
 
         int columns = 8;
         int rows = 17;
@@ -62,7 +62,7 @@ public class POISpreadSheetGenerator {
                     Cell cell = row.createCell(j * 2);
                     cell.setCellStyle(cellStyle);
                     Random random = new Random();
-                    cell.setCellValue(createHelper.createRichTextString(sounds[random.nextInt(sounds.length)]));
+                    cell.setCellValue(createHelper.createRichTextString(list[random.nextInt(list.length)]));
                 }
             }
         }

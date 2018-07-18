@@ -64,7 +64,6 @@ dependencies {
 //    compile 'net.sf.jasperreports:jasperreports-functions:6.6.0'
 //    compile 'net.sf.jasperreports:jasperreports-javaflow:6.6.0'
 
-
-
+    compile 'com.google.guava:guava:23.6.1-jre'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
