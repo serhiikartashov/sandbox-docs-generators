@@ -1,29 +1,27 @@
 package com.kartashov.apachepoi.examples;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.PrintSetup;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class SetPrintArea {
+public class Example19 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("Sheet1");
-        //sets the print area for the first sheet
-        wb.setPrintArea(0, "$A$1:$C$2");
+        Sheet sheet = wb.createSheet("format sheet");
+        PrintSetup ps = sheet.getPrintSetup();
 
-        //Alternatively:
-        wb.setPrintArea(
-                0, //sheet index
-                0, //start column
-                1, //end column
-                0, //start row
-                0  //end row
-        );
+        sheet.setAutobreaks(true);
+
+        ps.setFitHeight((short)1);
+        ps.setFitWidth((short)1);
+
+
+        // Create various cells and rows for spreadsheet.
 
         FileOutputStream fileOut = new FileOutputStream("workbook.xls");
         wb.write(fileOut);

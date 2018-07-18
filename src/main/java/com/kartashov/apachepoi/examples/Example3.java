@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class CreatingCells {
+public class Example3 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();

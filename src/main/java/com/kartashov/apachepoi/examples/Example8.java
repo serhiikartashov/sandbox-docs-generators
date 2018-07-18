@@ -6,7 +6,7 @@ import org.apache.poi.ss.usermodel.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class WorkingWithBorders {
+public class Example8 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();

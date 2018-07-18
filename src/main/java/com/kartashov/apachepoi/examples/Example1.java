@@ -7,7 +7,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class NewWorkbook {
+public class Example1 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb1 = new HSSFWorkbook();

@@ -8,7 +8,7 @@ import org.apache.poi.ss.util.WorkbookUtil;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class NewSheet {
+public class Example2 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();  // or new XSSFWorkbook();

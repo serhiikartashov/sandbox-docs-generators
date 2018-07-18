@@ -10,7 +10,7 @@ import org.apache.poi.ss.util.CellRangeAddress;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class MergingCells {
+public class Example14 {
 
     public static void main(String[] args) throws IOException {
         Workbook wb = new HSSFWorkbook();

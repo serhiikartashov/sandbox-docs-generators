@@ -3,7 +3,7 @@ package com.kartashov.aspose.examples;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
 
-public class NewWorkbook {
+public class Example1 {
 
     public static void main(String[] args) throws Exception {
         Workbook workbook = new Workbook(); // Creating a Workbook object
