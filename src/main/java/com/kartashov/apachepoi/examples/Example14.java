@@ -13,23 +13,25 @@ import java.io.IOException;
 public class Example14 {
 
     public static void main(String[] args) throws IOException {
-        Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("new sheet");
+        FileOutputStream fileOut;
+        try (Workbook wb = new HSSFWorkbook()) {
+            Sheet sheet = wb.createSheet("new sheet");
 
-        Row row = sheet.createRow(1);
-        Cell cell = row.createCell(1);
-        cell.setCellValue("This is a test of merging");
+            Row row = sheet.createRow(1);
+            Cell cell = row.createCell(1);
+            cell.setCellValue("This is a test of merging");
 
-        sheet.addMergedRegion(new CellRangeAddress(
-                1, //first row (0-based)
-                1, //last row  (0-based)
-                1, //first column (0-based)
-                2  //last column  (0-based)
-        ));
+            sheet.addMergedRegion(new CellRangeAddress(
+                    1, //first row (0-based)
+                    1, //last row  (0-based)
+                    1, //first column (0-based)
+                    2  //last column  (0-based)
+            ));
 
-        // Write the output to a file
-        FileOutputStream fileOut = new FileOutputStream("workbook.xls");
-        wb.write(fileOut);
+            // Write the output to a file
+            fileOut = new FileOutputStream("workbook.xls");
+            wb.write(fileOut);
+        }
         fileOut.close();
     }
 }

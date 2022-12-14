@@ -3,7 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -11,9 +11,11 @@ repositories {
         url 'https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/'
     }
     maven {
-        url 'https://artifact.aspose.com/repo/'
+        url 'https://releases.aspose.com/java/repo/'
     }
 }
+
+compileJava { options.encoding = "UTF-8" }
 
 dependencies {
     // Apache POI

@@ -11,20 +11,22 @@ import java.io.IOException;
 public class Example19 {
 
     public static void main(String[] args) throws IOException {
-        Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("format sheet");
-        PrintSetup ps = sheet.getPrintSetup();
+        FileOutputStream fileOut;
+        try (Workbook wb = new HSSFWorkbook()) {
+            Sheet sheet = wb.createSheet("format sheet");
+            PrintSetup ps = sheet.getPrintSetup();
 
-        sheet.setAutobreaks(true);
+            sheet.setAutobreaks(true);
 
-        ps.setFitHeight((short)1);
-        ps.setFitWidth((short)1);
+            ps.setFitHeight((short) 1);
+            ps.setFitWidth((short) 1);
 
 
-        // Create various cells and rows for spreadsheet.
+            // Create various cells and rows for spreadsheet.
 
-        FileOutputStream fileOut = new FileOutputStream("workbook.xls");
-        wb.write(fileOut);
+            fileOut = new FileOutputStream("workbook.xls");
+            wb.write(fileOut);
+        }
         fileOut.close();
     }
 }

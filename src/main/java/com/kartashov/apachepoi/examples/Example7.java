@@ -9,7 +9,7 @@ import java.io.OutputStream;
 public class Example7 {
 
     public static void main(String[] args) throws Exception {
-        Workbook wb = new XSSFWorkbook(); //or new HSSFWorkbook();
+        Workbook wb = new XSSFWorkbook(); // or HSSFWorkbook
 
         Sheet sheet = wb.createSheet();
         Row row = sheet.createRow(2);

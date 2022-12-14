@@ -2,9 +2,9 @@ package com.kartashov;
 
 import com.google.common.base.CharMatcher;
 
-public class Util {
+public interface Util {
 
-    public static String[] sounds = new String[]{
+    String[] sounds = new String[]{
             "A", "I", "U", "E", "O",
             "KA", "KI", "KU", "KE", "KO",
             "SA", "SI", "SU", "SE", "SO",
@@ -29,7 +29,7 @@ public class Util {
             "rya", "ryu", "ryo",
     };
 
-    public static String[] katakana = new String[]{
+    String[] katakana_symbols = new String[]{
             "ア", "イ", "ウ", "エ", "オ",
             "カ", "キ", "ク", "ケ", "コ",
             "サ", "シ", "ス", "セ", "ソ",
@@ -58,15 +58,15 @@ public class Util {
             "ビャ", "ビュ", "ビョ",
             "ピャ", "ピュ", "ピョ"};
 
-    public static final CharMatcher HIRAGANA =
+    CharMatcher HIRAGANA =
             CharMatcher.inRange((char) 0x3040, (char) 0x309f);
 
-    public static final CharMatcher KATAKANA =
+    CharMatcher KATAKANA =
             CharMatcher.inRange((char) 0x30a0, (char) 0x30ff);
 
-    public static final CharMatcher KANA = HIRAGANA.or(KATAKANA);
+    CharMatcher KANA = HIRAGANA.or(KATAKANA);
 
-    public static final CharMatcher KANJI =
+    CharMatcher KANJI =
             CharMatcher.inRange((char) 0x4e00, (char) 0x9faf);
 
 }

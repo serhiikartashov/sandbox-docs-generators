@@ -8,12 +8,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Random;
 
-import static com.kartashov.Util.katakana;
+import static com.kartashov.Util.katakana_symbols;
 
 public class POISpreadSheetGenerator {
 
     public static void main(String[] args) throws IOException {
-        String[] list = katakana;
+        String[] list = katakana_symbols;
 
         int columns = 8;
         int rows = 17;

@@ -10,14 +10,18 @@ import java.io.IOException;
 public class Example1 {
 
     public static void main(String[] args) throws IOException {
-        Workbook wb1 = new HSSFWorkbook();
-        FileOutputStream fileOut1 = new FileOutputStream("workbook.xls");
-        wb1.write(fileOut1);
+        FileOutputStream fileOut1;
+        try (Workbook wb1 = new HSSFWorkbook()) {
+            fileOut1 = new FileOutputStream("workbook.xls");
+            wb1.write(fileOut1);
+        }
         fileOut1.close();
 
-        Workbook wb2 = new XSSFWorkbook();
-        FileOutputStream fileOut2 = new FileOutputStream("workbook.xlsx");
-        wb2.write(fileOut2);
+        FileOutputStream fileOut2;
+        try (Workbook wb2 = new XSSFWorkbook()) {
+            fileOut2 = new FileOutputStream("workbook.xlsx");
+            wb2.write(fileOut2);
+        }
         fileOut2.close();
     }
 }
