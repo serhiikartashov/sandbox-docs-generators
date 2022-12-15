@@ -1,6 +1,7 @@
 *.xls
 *.xlsx
 *.pdf
+*.csv
 .gradle
 .idea
 /out
